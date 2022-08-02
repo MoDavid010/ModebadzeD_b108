@@ -86,8 +86,8 @@ class Trapezium:
         print(f"Площаль трапеции = {s}")
         return s
 
-
-trapezium1 = Trapezium([1, 2], [3, 5], [4, 5], [6, 8])
+trapezium1 = Trapezium([5, 1], [6, 3], [8, 1], [5, 7])
+#trapezium1 = Trapezium([1, 2], [3, 5], [4, 5], [6, 8])
 trapezium1.check()
 trapezium1.perimetr()
 trapezium1.square()
