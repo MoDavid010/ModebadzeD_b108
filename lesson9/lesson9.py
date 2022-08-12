@@ -48,10 +48,7 @@ class TagFactory:
 
 if __name__ == "__main__":
     factory = TagFactory()
-    elements = ["image", "input", "p", "a", "", 34, "ham"]
+    elements = ["image", "input", "p", "a", ""]
 
     for i in elements:
-        try:
-            print(factory.create_tag(i).get_html("class="))
-        except ValueError as ve:
-            print("Недопустимый тег: {}".format(ve))
+        print(factory.create_tag(i).get_html("class="))
