@@ -66,27 +66,22 @@ class Trapezium:
         return len_ab, len_bc, len_cd, len_da
 
     def check(self):
-        if self.len_side()[0] == self.len_side()[2]:
-            print("Трапеция является равнобокой")
-        else:
-            print("Трапеция не является равнобокой")
+        return self.len_side()[0] == self.len_side()[2]
 
     def perimetr(self):
         p = 0
         for i in self.len_side():
             p += i
-        print(f"Периметр трапеции = {p}")
         return p
 
     def square(self):
         import math
         s = ((self.len_side()[1] + self.len_side()[3]) / 2) * math.sqrt(
             (self.len_side()[0] ** 2) - ((self.len_side()[3] - self.len_side()[1]) ** 2) / 4)
-        print(f"Площаль трапеции = {s}")
         return s
 
 
-trapezium1 = Trapezium([5, 1], [6, 3], [8, 1], [5, 7])
-trapezium1.check()
-trapezium1.perimetr()
-trapezium1.square()
+trapezium1 = Trapezium([1, 2], [3, 5], [4, 5], [6, 8])
+print("Является ли трапеция равнобокой: {}".format(trapezium1.check()))
+print("Периметр трапеции = {}".format(trapezium1.perimetr()))
+print("Площадь трапеции = {}".format(trapezium1.square()))
