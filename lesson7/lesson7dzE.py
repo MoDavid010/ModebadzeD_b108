@@ -81,7 +81,8 @@ class Trapezium:
         return s
 
 
-trapezium1 = Trapezium([1, 2], [3, 5], [4, 5], [6, 8])
-print("Является ли трапеция равнобокой: {}".format(trapezium1.check()))
-print("Периметр трапеции = {}".format(trapezium1.perimetr()))
-print("Площадь трапеции = {}".format(trapezium1.square()))
+if __name__ == "__main__":
+    trapezium1 = Trapezium([1, 2], [3, 5], [4, 5], [6, 8])
+    print("Является ли трапеция равнобокой: {}".format(trapezium1.check()))
+    print("Периметр трапеции = {}".format(trapezium1.perimetr()))
+    print("Площадь трапеции = {}".format(trapezium1.square()))
