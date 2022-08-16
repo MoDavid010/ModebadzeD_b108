@@ -31,11 +31,11 @@ class Triangle:
         return self.areaTriangle() / (self.AB / 2)
 
 
-triangle1 = Triangle((8, 13), (4, 9), (5, 2))
-
-print(triangle1.areaTriangle())
-print(triangle1.heightTriangle())
-print(triangle1.perimeterTriangle())
+if __name__ == "__main__":
+    triangle1 = Triangle((8, 13), (4, 9), (5, 2))
+    print("Площадь треугольника равна: {}".format(triangle1.areaTriangle()))
+    print("Высота треугольника равна: {}".format(triangle1.heightTriangle()))
+    print("периметр треугольника равенЖ: {}".format(triangle1.perimeterTriangle()))
 
 
 # Задача-2: Написать Класс "Равнобочная трапеция", заданной координатами 4-х точек.
