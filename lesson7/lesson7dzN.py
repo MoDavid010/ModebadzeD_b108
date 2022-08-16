@@ -49,8 +49,8 @@ parents = [Human("Кошелев", "Николай", "Игоревич", "05.08.
            Human("Бокарева", "Юлия", "Ивановна", "15.02.1985"),
            Human("Петров", "Владимир", "Александрович", "11.08.1981"),
            Human("Петрова", "Ольга", "Николаевна", "11.08.1981")]
-students = [Student("Кошелев", "Святослав", "Николаевич", '10.11.2007', class_rooms[0], parents[2], parents[3]),
-            Student("Бокарев", "Святополк", 'Алексеевич', '10.01.207', class_rooms[2], parents[0], parents[1]),
+students = [Student("Кошелев", "Святослав", "Николаевич", '10.11.2007', class_rooms[0], parents[0], parents[1]),
+            Student("Бокарев", "Святополк", 'Алексеевич', '10.01.207', class_rooms[2], parents[2], parents[3]),
             Student("Петрова", "Анастасия", 'Владимировна', '12.11.2010', class_rooms[1], parents[4], parents[5])]
 teachers = [Teacher("Сидоров", "Иван", "Игоревич", "02.06.1981", [class_rooms[0], class_rooms[1]], subject[2]),
             Teacher("Иванов", "Иван", "Александрович", "14.03.1984", [class_rooms[2], class_rooms[1]], subject[1]),
@@ -70,9 +70,9 @@ student = students[0]
 t_list = [i for i in teachers if student.get_class_room() in i.get_classes()]
 
 t_names = [i.get_full_name() for i in t_list]
-subj = [subject for i in teachers]
+subj = [i.subject for i in t_list]
 print(student.get_full_name() + ' , ' + student.get_class_room() + ' , ' + ' '.join(
-      map(str, t_names)) + ',' + ' '.join(map(str, subj)))
+      map(str, t_names)) + ', ' + ' '.join(map(str, subj)))
 
 # 4. Узнать ФИО родителей указанного ученика
 his_parents = student.get_parents()

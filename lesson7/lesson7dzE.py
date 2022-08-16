@@ -1,48 +1,47 @@
 # Задача-1: Написать класс для фигуры-треугольника, заданного координатами трех точек.
 # Определить методы, позволяющие вычислить: площадь, высоту и периметр фигуры.
 
-# import math
-#
-#
-# class Triangle:
-#    def __init__(self, A, B, C):
-#        def side_length(dot1, dot2):
-#            return math.sqrt((dot1[0] - dot2[0]) ** 2
-#                             + (dot1[1] - dot2[1]) ** 2)
-#
-#        self.A = A
-#        self.B = B
-#        self.C = C
-#
-#        self.AB = side_length(self.A, self.B)
-#        self.BC = side_length(self.B, self.C)
-#        self.CA = side_length(self.C, self.A)
-#
-#    def areaTriangle(self):
-#        semi_perimeter = self.perimeterTriangle() / 2
-#
-#        return math.sqrt(
-#            semi_perimeter * (semi_perimeter - self.AB) * (semi_perimeter - self.BC) * (semi_perimeter - self.CA))
-#
-#    def perimeterTriangle(self):
-#        return self.AB + self.BC + self.CA
-#
-#    def heightTriangle(self):
-#        return self.areaTriangle() / (self.AB / 2)
-#
-#
-# triangle1 = Triangle((8, 13), (4, 9), (5, 2))
-#
-# print(triangle1.areaTriangle())
-# print(triangle1.heightTriangle())
-# print(triangle1.perimeterTriangle())
+import math
+
+
+class Triangle:
+    def __init__(self, A, B, C):
+        def side_length(dot1, dot2):
+            return math.sqrt((dot1[0] - dot2[0]) ** 2
+                             + (dot1[1] - dot2[1]) ** 2)
+
+        self.A = A
+        self.B = B
+        self.C = C
+
+        self.AB = side_length(self.A, self.B)
+        self.BC = side_length(self.B, self.C)
+        self.CA = side_length(self.C, self.A)
+
+    def areaTriangle(self):
+        semi_perimeter = self.perimeterTriangle() / 2
+
+        return math.sqrt(
+            semi_perimeter * (semi_perimeter - self.AB) * (semi_perimeter - self.BC) * (semi_perimeter - self.CA))
+
+    def perimeterTriangle(self):
+        return self.AB + self.BC + self.CA
+
+    def heightTriangle(self):
+        return self.areaTriangle() / (self.AB / 2)
+
+
+triangle1 = Triangle((8, 13), (4, 9), (5, 2))
+
+print(triangle1.areaTriangle())
+print(triangle1.heightTriangle())
+print(triangle1.perimeterTriangle())
 
 
 # Задача-2: Написать Класс "Равнобочная трапеция", заданной координатами 4-х точек.
 # Предусмотреть в классе методы:
 # проверка, является ли фигура равнобочной трапецией;
 # вычисления: длины сторон, периметр, площадь.
-import math
 
 
 class Trapezium:
@@ -86,8 +85,8 @@ class Trapezium:
         print(f"Площаль трапеции = {s}")
         return s
 
+
 trapezium1 = Trapezium([5, 1], [6, 3], [8, 1], [5, 7])
-#trapezium1 = Trapezium([1, 2], [3, 5], [4, 5], [6, 8])
 trapezium1.check()
 trapezium1.perimetr()
 trapezium1.square()
